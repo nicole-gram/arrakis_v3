@@ -23,7 +23,7 @@ CREATE TABLE security (
     issuer_name VARCHAR(255),
     bond_maturity_date DATE,
     bond_currency VARCHAR(3),
-    face_value INT(10)
+    face_value INT
 );
 
 CREATE TABLE book_user (
