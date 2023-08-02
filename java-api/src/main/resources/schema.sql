@@ -13,7 +13,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE counter_party (
-    counter_party_id INT AUTO_INCREMENT PRIMARY KEY
+    counter_party_id INT PRIMARY KEY
 );
 
 CREATE TABLE security (
@@ -28,7 +28,7 @@ CREATE TABLE security (
 
 CREATE TABLE book_user (
     book_id INT,
-    u_id INT ,
+    u_id INT,
     PRIMARY KEY (book_id, u_id),
     FOREIGN KEY (book_id) REFERENCES book(book_id),
     FOREIGN KEY (u_id) REFERENCES users(u_id)
