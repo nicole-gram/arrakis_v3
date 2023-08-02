@@ -58,7 +58,7 @@ VALUES
     ('Zurich Pension fund 4', 'buy', 'USD', 50, '2021-08-23', 'open', '2012-08-23', 100.13, 2.02, 'USD', '87973RAA8', 690, 'US87973RAA86', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2021-08-06', 'active', 'SOVN', 'Trading_book_4');
 
 
-INSERT INTO security (cusip, isin, issuer_name, bond_maturity_date, bond_currency, face_value)
+INSERT IGNORE INTO security (cusip, isin, issuer_name, bond_maturity_date, bond_currency, face_value)
 VALUES
     -- Row 1
     ('', 'XS1988387210', 'BNPParibasIssu 4,37% Microsoft Corp (USD)', '2021-08-05', 'USD', 1000),
