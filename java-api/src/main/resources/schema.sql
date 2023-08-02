@@ -13,7 +13,8 @@ CREATE TABLE users (
 );
 
 CREATE TABLE counter_party (
-    counter_party_id INT PRIMARY KEY
+    counter_party_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(20)
 );
 
 CREATE TABLE security (
