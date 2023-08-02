@@ -1,6 +1,8 @@
 # arrakis_v3
 # Dogs APIs
 
+Trello Board: https://trello.com/invite/dbtraininggroup/ATTI3ea9759e8a69d1c1242c94a1b2bb34a3D4E7E786
+
 ![dogs](dogs_api.jpg)
 
 In this example, we are creating crud operations and exposing them through REST APIs so that UI clients can invoke these operations. The demo operations enable the clients to modify the dogs records in database.
