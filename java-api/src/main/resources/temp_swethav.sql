@@ -1,22 +1,12 @@
-INSERT IGNORE INTO security (cusip, isin, issuer_name, bond_maturity_date, bond_currency, face_value)
+INSERT INTO security (cusip, isin, issuer_name, bond_maturity_date, bond_currency, face_value)
 VALUES
     -- Row 1
     ('', 'XS1988387210', 'BNPParibasIssu 4,37% Microsoft Corp (USD)', '2021-08-05', 'USD', 1000),
-    -- Row 2
-    ('', 'XS1988387210', 'BNPParibasIssu 4,37% Microsoft Corp (USD)', '2021-08-05', 'USD', 1000),
     -- Row 3
-    ('123456780', 'USN0280EAR64', 'Airbus 3.15% USD', '2021-07-30', 'USD', 900),
-    -- Row 4
     ('123456780', 'USN0280EAR64', 'Airbus 3.15% USD', '2021-07-30', 'USD', 900),
     -- Row 5
     ('123456bh0', 'A12356111', 'UBS Facebook (USD)', '2021-09-30', 'USD', 900),
-    -- Row 6
-    ('123456780', 'USN0280EAR64', 'Airbus 3.15% USD', '2021-07-30', 'USD', 900),
-    -- Row 7
-    ('123456bh0', 'A12356111', 'UBS Facebook (USD)', '2021-09-30', 'USD', 900),
     -- Row 8
-    ('AMZN 3.15 08/22/27 REGS', 'USU02320AG12', 'Amazon', '2021-08-03', 'USD', 900),
-    -- Row 9
     ('AMZN 3.15 08/22/27 REGS', 'USU02320AG12', 'Amazon', '2021-08-03', 'USD', 900),
     -- Row 10
     ('BDCHBW8', 'GB00B6460505', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
@@ -42,20 +32,10 @@ VALUES
     ('BDCHBW8', 'GB00B6460515', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
     -- Row 21
     ('US87973RAA86', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2030-12-22', 'USD', 340),
-    -- Row 22
-    ('US87973RAA86', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2030-12-22', 'USD', 340),
-    -- Row 23
-    ('US87973RAA86', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2030-12-22', 'USD', 340),
-    -- Row 24
-    ('US87973RAA86', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2030-12-22', 'USD', 340),
     -- Row 25
-    ('IE00B29LNP31', 'First Norway Alpha Kl.IV', '2030-12-22', 'USD', 340),
-    -- Row 26
-    ('IE00B29LNP31', 'First Norway Alpha Kl.IV', '2030-12-22', 'USD', 340),
-    -- Row 27
-    ('IE00B29LNP31', 'First Norway Alpha Kl.IV', '2030-12-22', 'USD', 340),
-    -- Row 28
     ('IE00B29LNP31', 'First Norway Alpha Kl.IV', '2030-12-22', 'USD', 340);
+
+
 INSERT INTO trade (bond_holder, trade_type, trade_currency, quantity, trade_settlement_date, trade_status, trade_date, unit_price, coupon_percent, bond_currency, cusip, face_value, isin, issuer_name, bond_maturity_date, status, type, book_name)
 VALUES
     -- Row 1
