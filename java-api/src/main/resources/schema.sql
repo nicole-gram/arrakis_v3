@@ -3,21 +3,21 @@ CREATE schema bonds;
 USE bonds;
 
 CREATE TABLE book (
-    book_id INT PRIMARY KEY,
+    book_id INT AUTO_INCREMENT PRIMARY KEY,
     book_name VARCHAR(255)
 );
 
 CREATE TABLE users (
-    u_id INT PRIMARY KEY,
+    u_id INT AUTO_INCREMENT PRIMARY KEY,
     u_name VARCHAR(50)
 );
 
 CREATE TABLE counter_party (
-    counter_party_id INT PRIMARY KEY
+    counter_party_id INT AUTO_INCREMENT PRIMARY KEY
 );
 
 CREATE TABLE security (
-    security_id INT PRIMARY KEY,
+    security_id INT AUTO_INCREMENT PRIMARY KEY,
     cusip VARCHAR(50),
     isin VARCHAR(50),
     issuer_name VARCHAR(255),
@@ -28,14 +28,14 @@ CREATE TABLE security (
 
 CREATE TABLE book_user (
     book_id INT,
-    u_id INT,
+    u_id INT ,
     PRIMARY KEY (book_id, u_id),
     FOREIGN KEY (book_id) REFERENCES book(book_id),
     FOREIGN KEY (u_id) REFERENCES users(u_id)
 );
 
 CREATE TABLE trade (
-    trade_id INT PRIMARY KEY,
+    trade_id INT AUTO_INCREMENT PRIMARY KEY,
     book_id INT,
     security_id INT,
     counter_party_id INT,
