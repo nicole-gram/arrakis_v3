@@ -5,15 +5,15 @@ INSERT INTO book (name) VALUES ('Trading_book_4');
 INSERT INTO book (name) VALUES ('Trading_book_6');
 
 INSERT INTO `client` (name,email,role) VALUES ('iboyles','ianboyles2@gmail.com','Analyst');
-INSERT INTO `client` (name,email,role) VALUES ('bob','bobberson@gmail.com','No Access');
 INSERT INTO `client` (name,email,role) VALUES ('neelkanth','neelkanth@gmail.com','Admin');
+INSERT INTO `client` (name,email,role) VALUES ('bob','bobberson@gmail.com','No Access');
+
 
 INSERT INTO counterparty (name) VALUES ('jeff');
 INSERT INTO counterparty (name) VALUES ('john');
 INSERT INTO counterparty (name) VALUES ('swetha');
 
 INSERT INTO book_client (book_id, client_id) VALUES (1, 1),(1, 2),(2, 1);
-
 
 --
 --INSERT INTO security (cusip, isin, issuer_name, bond_maturity_date, bond_currency, face_value)
