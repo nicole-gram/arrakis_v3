@@ -2,7 +2,7 @@ package com.db.grad.javaapi.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "client")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
