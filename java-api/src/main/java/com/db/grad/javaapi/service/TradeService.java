@@ -56,11 +56,16 @@ public class TradeService {
 
     public List<Trade> getTradesWithinFiveDays() {
         LocalDateTime today = LocalDateTime.now();
-
         today = today.withYear(2021);
-
         LocalDateTime fiveDaysFromNow = today.plusDays(5);
         return tradeRepository.findBySettlementDateBetween(today, fiveDaysFromNow);
+    }
+
+    public List<Trade> getTradesWithinFiveDaysBehind() {
+        LocalDateTime today = LocalDateTime.now();
+        today = today.withYear(2021);
+        LocalDateTime fiveDaysFromPast = today.minusDays(5);
+        return tradeRepository.findBySettlementDateBetween(fiveDaysFromPast,today);
     }
 
 

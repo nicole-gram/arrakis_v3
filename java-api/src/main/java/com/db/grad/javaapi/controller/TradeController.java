@@ -33,4 +33,9 @@ public class TradeController {
         return tradeService.getTradesWithinFiveDays();
     }
 
+    @GetMapping("/within-five-days-behind")
+    public List<Trade> getTradesWithinFiveDaysBehind() {
+        return tradeService.getTradesWithinFiveDaysBehind();
+    }
+
 }

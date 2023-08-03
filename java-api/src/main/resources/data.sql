@@ -8,7 +8,6 @@ INSERT INTO `client` (name,email,role) VALUES ('iboyles','ianboyles2@gmail.com',
 INSERT INTO `client` (name,email,role) VALUES ('neelkanth','neelkanth@gmail.com','Admin');
 INSERT INTO `client` (name,email,role) VALUES ('bob','bobberson@gmail.com','No Access');
 
-
 INSERT INTO counterparty (name) VALUES ('jeff');
 INSERT INTO counterparty (name) VALUES ('john');
 INSERT INTO counterparty (name) VALUES ('swetha');
