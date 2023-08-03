@@ -1,98 +1,96 @@
-INSERT INTO security (cusip, isin, issuer_name, bond_maturity_date, bond_currency, face_value)
+INSERT INTO security (isin, cusip, issuer_name, maturity_date, coupon, type, face_value, currency, status)
 VALUES
     -- Row 1
-    ('', 'XS1988387210', 'BNPParibasIssu 4,37% Microsoft Corp (USD)', '2021-08-05', 'USD', 1000),
-    -- Row 3
-    ('123456780', 'USN0280EAR64', 'Airbus 3.15% USD', '2021-07-30', 'USD', 900),
-    -- Row 5
-    ('123456bh0', 'A12356111', 'UBS Facebook (USD)', '2021-09-30', 'USD', 900),
-    -- Row 8
-    ('AMZN 3.15 08/22/27 REGS', 'USU02320AG12', 'Amazon', '2021-08-03', 'USD', 900),
-    -- Row 10
-    ('BDCHBW8', 'GB00B6460505', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
-    -- Row 11
-    ('BDCHBW8', 'GB00B6460506', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
-    -- Row 12
-    ('BDCHBW8', 'GB00B6460507', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
-    -- Row 13
-    ('BDCHBW8', 'GB00B6460508', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
-    -- Row 14
-    ('BDCHBW8', 'GB00B6460509', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
-    -- Row 15
-    ('BDCHBW8', 'GB00B6460510', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
-    -- Row 16
-    ('BDCHBW8', 'GB00B6460511', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
-    -- Row 17
-    ('BDCHBW8', 'GB00B6460512', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
-    -- Row 18
-    ('BDCHBW8', 'GB00B6460513', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
-    -- Row 19
-    ('BDCHBW8', 'GB00B6460514', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
-    -- Row 20
-    ('BDCHBW8', 'GB00B6460515', 'HM Treasury United Kingdom', '2021-08-09', 'GBP', 900),
-    -- Row 21
-    ('US87973RAA86', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2030-12-22', 'USD', 340),
-    -- Row 25
-    ('IE00B29LNP31', 'First Norway Alpha Kl.IV', '2030-12-22', 'USD', 340);
-
-
-INSERT INTO trade (bond_holder, trade_type, trade_currency, quantity, trade_settlement_date, trade_status, trade_date, unit_price, coupon_percent, bond_currency, cusip, face_value, isin, issuer_name, bond_maturity_date, status, type, book_name)
-VALUES
-    -- Row 1
-    ('AZ Holdings Inc', 'buy', 'USD', 50, '2021-08-04', 'open', '2021-05-13', 90, 4.37, 'USD', 'XS1988387210', 1000, 'BNPParibasIssu 4,37% Microsoft Corp (USD)', '2021-08-05', 'active', 'CORP', 'trading_book_1'),
+    ('XS1988387210', '', 'BNPParibasIssu 4,37% Microsoft Corp (USD)', '2021-08-05', 4.37, '', 1000, 'USD', NULL),
     -- Row 2
-    ('AZ Holdings Inc', 'sell', 'GBP', 40, '2021-08-04', 'open', '2021-02-04', 89.56, 4.37, 'USD', 'XS1988387210', 1000, 'BNPParibasIssu 4,37% Microsoft Corp (USD)', '2021-08-05', 'active', 'CORP', 'trading_book_1'),
+    ('USN0280EAR64', '123456780', 'Airbus 3.15% USD', '2021-07-30', 3.15, '', 900, 'USD', NULL),
     -- Row 3
-    ('Acme co', 'buy', 'USD', 1000, '2021-08-23', 'open', '2021-05-13', 105.775, 3.15, 'USD', '123456780', 900, 'USN0280EAR64', 'Airbus 3.15% USD', '2021-07-30', 'active', 'CORP', 'trading_book_2'),
+    ('A12356111', '123456bh0', 'UBS Facebook (USD)', '2021-09-30', 2, '', 900, 'USD', NULL),
     -- Row 4
-    ('Acme Co', 'sell', 'GBP', 900, '2021-09-10', 'open', '2021-02-04', 105.775, 3.15, 'USD', '123456780', 900, 'USN0280EAR64', 'Airbus 3.15% USD', '2021-07-30', 'active', 'CORP', 'trading_book_2'),
+    ('USU02320AG12', 'AMZN 3.15 08/22/27 REGS', 'Amazon', '2021-08-03', 3.15, '', 900, 'USD', NULL),
     -- Row 5
-    ('Sovereign Investments', 'buy', 'USD', 50, '2021-08-23', 'open', '2021-05-13', 90, 2, 'USD', '123456bh0', 900, 'A12356111', 'UBS Facebook (USD)', '2021-09-30', 'active', 'CORP', 'Trading_book_3'),
+    ('GB00B6460505', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
     -- Row 6
-    ('Astra Trading Ltd', 'buy', 'USD', 1000, '2021-08-23', 'open', '2021-05-13', 105.775, 3.15, 'USD', '123456780', 900, 'USN0280EAR64', 'Airbus 3.15% USD', '2021-07-30', 'active', 'CORP', 'trading_book_2'),
+    ('GB00B6460506', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
     -- Row 7
-    ('Sovereign Investments', 'sell', 'USD', 50, '2021-08-23', 'open', '2021-05-13', 90, 2, 'USD', '123456bh0', 900, 'A12356111', 'UBS Facebook (USD)', '2021-09-30', 'active', 'CORP', 'Trading_book_2'),
+    ('GB00B6460507', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
     -- Row 8
-    ('Muncipal Gov Of Orange County', 'buy', 'GBP', 60, '2021-09-27', 'open', '2021-02-04', 98.56, 3.15, 'USD', 'AMZN 3.15 08/22/27 REGS', 900, 'USU02320AG12', 'Amazon', '2021-08-03', 'active', 'CORP', 'Trading_book_4'),
+    ('GB00B6460508', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
     -- Row 9
-    ('Muncipal Gov Of Orange County', 'buy', 'USD', 50, '2021-08-23', 'open', '2022-08-23', 98.56, 3.15, 'USD', 'AMZN 3.15 08/22/27 REGS', 900, 'USU02320AG12', 'Amazon', '2021-08-03', 'active', 'CORP', 'Trading_book_4'),
+    ('GB00B6460509', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
     -- Row 10
-    ('Muncipal Gov Of Orange County', 'buy', 'USD', 75, '2021-09-27', 'open', '2013-02-04', 100.13, 2.02, 'USD', '87973RAA8', 690, 'US87973RAA86', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2030-12-22', 'active', 'SOVN', 'Trading_book_4'),
+    ('GB00B6460510', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
     -- Row 11
-    ('Muncipal Gov Of Orange County', 'buy', 'USD', 50, '2021-08-23', 'open', '2014-08-23', 100.13, 2.02, 'USD', '87973RAA8', 690, 'US87973RAA86', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2030-12-22', 'active', 'SOVN', 'Trading_book_4'),
+    ('GB00B6460511', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
     -- Row 12
-    ('Zurich Pension fund 4', 'buy', 'USD', 300, '2021-09-27', 'open', '2016-02-04', 98.76, 1.123, 'USD', '87973RAA8', 340, 'IE00B29LNP31', 'First Norway Alpha Kl.IV', '2030-12-22', 'active', 'SOVN', 'Trading_book_4'),
+    ('GB00B6460512', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
     -- Row 13
-    ('Zurich Pension fund 4', 'buy', 'USD', 300, '2021-08-23', 'open', '2012-08-23', 98.76, 1.123, 'USD', '87973RAA8', 340, 'IE00B29LNP31', 'First Norway Alpha Kl.IV', '2030-12-22', 'active', 'SOVN', 'Trading_book_4'),
+    ('GB00B6460513', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
     -- Row 14
-    ('Zurich Pension fund 4', 'buy', 'USD', 300, '2021-09-27', 'open', '2013-02-04', 98.76, 1.123, 'USD', '87973RAA8', 340, 'IE00B29LNP31', 'First Norway Alpha Kl.IV', '2030-12-22', 'active', 'SOVN', 'Trading_book_4'),
+    ('GB00B6460514', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
     -- Row 15
-    ('Zurich Pension fund 4', 'sell', 'USD', 300, '2021-08-23', 'open', '2015-08-23', 98.76, 1.123, 'USD', '87973RAA8', 340, 'IE00B29LNP31', 'First Norway Alpha Kl.IV', '2030-12-22', 'active', 'SOVN', 'Trading_book_4'),
+    ('GB00B6460515', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
     -- Row 16
-    ('Goldman Sachs', 'buy', 'GBP', 1100, '2021-09-27', 'open', '2021-09-27', 110.35, 0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460505', 'HM Treasury United Kingdom', '2021-08-09', 'active', 'GOVN', 'Trading_book_6'),
+    ('US87973RAA86', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2030-12-22', 1.123, 'USD', 340, 'USD', NULL),
     -- Row 17
-    ('Goldman Sachs', 'sell', 'GBP', 900, '2021-09-28', 'open', '2021-09-28', 110.35, 0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460506', 'HM Treasury United Kingdom', '2021-08-09', 'active', 'GOVN', 'Trading_book_6'),
+    ('IE00B29LNP31', 'First Norway Alpha Kl.IV', '2030-12-22', 1.123, 'USD', 340, 'USD', NULL);
+
+
+INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, unit_price, buy_sell, trade_date, settlement_date)
+VALUES
+    -- Row 1
+    (1, 1, 1, 'USD', 'open', 50, 90, 'buy', '2021-05-13 00:00:00', '2021-08-04 00:00:00'),
+    -- Row 2
+    (1, 2, 3, 'GBP', 'open', 40, 89.56, 'sell', '2021-02-04 00:00:00', '2021-08-04 00:00:00'),
+    -- Row 3
+    (2, 3, 2, 'USD', 'open', 1000, 105.775, 'buy', '2021-05-13 00:00:00', '2021-08-23 00:00:00'),
+    -- Row 4
+    (2, 4, 1, 'GBP', 'open', 900, 105.775, 'sell', '2021-02-04 00:00:00', '2021-09-10 00:00:00'),
+    -- Row 5
+    (3, 5, 2, 'USD', 'open', 50, 90, 'buy', '2021-05-13 00:00:00', '2021-08-23 00:00:00'),
+    -- Row 6
+    (2, 6, 3, 'USD', 'open', 1000, 105.775, 'buy', '2021-05-13 00:00:00', '2021-08-23 00:00:00'),
+    -- Row 7
+    (2, 7, 1, 'USD', 'open', 50, 90, 'sell', '2021-05-13 00:00:00', '2021-08-23 00:00:00'),
+    -- Row 8
+    (4, 8, 2, 'GBP', 'open', 60, 98.56, 'buy', '2021-02-04 00:00:00', '2021-09-27 00:00:00'),
+    -- Row 9
+    (4, 9, 1, 'USD', 'active', 50, 98.56, 'buy', '2012-02-04 00:00:00', '2021-08-23 00:00:00'),
+    -- Row 10
+    (5, 10, 2, 'GBP', 'open', 1100, 110.35, 'buy', '2021-09-27 00:00:00', '2021-09-27 00:00:00'),
+    -- Row 11
+    (5, 11, 1, 'GBP', 'open', 900, 110.35, 'sell', '2021-09-28 00:00:00', '2021-09-28 00:00:00'),
+    -- Row 12
+    (5, 12, 3, 'GBP', 'active', 2000, 110.35, 'buy', '2021-09-29 00:00:00', '2021-09-29 00:00:00'),
+    -- Row 13
+    (5, 13, 2, 'GBP', 'active', 2000, 110.35, 'sell', '2021-09-30 00:00:00', '2021-09-30 00:00:00'),
+    -- Row 14
+    (5, 14, 1, 'GBP', 'active', 1000, 110.35, 'buy', '2021-10-01 00:00:00', '2021-10-01 00:00:00'),
+    -- Row 15
+    (5, 15, 2, 'GBP', 'active', 900, 110.35, 'buy', '2019-10-02 00:00:00', '2019-10-02 00:00:00'),
+    -- Row 16
+    (5, 16, 1, 'GBP', 'active', 1900, 110.35, 'sell', '2019-10-03 00:00:00', '2019-10-03 00:00:00'),
+    -- Row 17
+    (5, 17, 3, 'GBP', 'active', 600, 110.35, 'buy', '2018-10-04 00:00:00', '2018-10-04 00:00:00'),
     -- Row 18
-    ('UBS', 'buy', 'GBP', 2000, '2021-09-29', 'open', '2021-09-29', 110.35, 0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460507', 'HM Treasury United Kingdom', '2021-08-09', 'active', 'GOVN', 'Trading_book_6'),
+    (5, 17, 1, 'GBP', 'active', 600, 110.35, 'buy', '2019-10-05 00:00:00', '2019-10-05 00:00:00'),
     -- Row 19
-    ('UBS', 'sell', 'GBP', 2000, '2021-09-30', 'open', '2021-09-30', 110.35, 0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460508', 'HM Treasury United Kingdom', '2021-08-09', 'active', 'GOVN', 'Trading_book_6'),
+    (5, 17, 2, 'GBP', 'active', 700, 110.35, 'buy', '2021-06-06 00:00:00', '2021-06-06 00:00:00'),
     -- Row 20
-    ('Barclays', 'buy', 'GBP', 1000, '2021-10-01', 'open', '2021-10-01', 110.35, 0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460509', 'HM Treasury United Kingdom', '2021-08-09', 'active', 'GOVN', 'Trading_book_6'),
+    (5, 17, 1, 'GBP', 'active', 1300, 110.35, 'sell', '2021-10-07 00:00:00', '2011-10-07 00:00:00'),
     -- Row 21
-    ('Barclays', 'buy', 'GBP', 900, '2019-10-02', 'open', '2019-10-02', 110.35, 0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460510', 'HM Treasury United Kingdom', '2021-08-09', 'active', 'GOVN', 'Trading_book_6'),
+    (4, 17, 3, 'USD', 'active', 60, 100.13, 'buy', '2021-09-27 00:00:00', '2012-04-02 00:00:00'),
     -- Row 22
-    ('Barclays', 'sell', 'GBP', 1900, '2019-10-03', 'open', '2019-10-03', 110.35, 0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460511', 'HM Treasury United Kingdom', '2021-08-09', 'active', 'GOVN', 'Trading_book_6'),
+    (4, 17, 1, 'USD', 'active', 50, 100.13, 'buy', '2021-08-23 00:00:00', '2012-08-23 00:00:00'),
     -- Row 23
-    ('British Telecom', 'buy', 'GBP', 600, '2018-10-04', 'open', '2018-10-04', 110.35, 0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460512', 'HM Treasury United Kingdom', '2021-08-09', 'active', 'GOVN', 'Trading_book_6'),
+    (4, 17, 2, 'USD', 'active', 75, 100.13, 'buy', '2021-09-27 00:00:00', '2013-04-02 00:00:00'),
     -- Row 24
-    ('Pension Holdings', 'buy', 'GBP', 600, '2019-10-05', 'open', '2019-10-05', 110.35, 0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460513', 'HM Treasury United Kingdom', '2021-08-09', 'active', 'GOVN', 'Trading_book_6'),
+    (4, 17, 3, 'USD', 'active', 50, 100.13, 'buy', '2021-08-23 00:00:00', '2014-08-23 00:00:00'),
     -- Row 25
-    ('Pension Holdings', 'buy', 'GBP', 700, '2021-06-06', 'open', '2021-06-06', 110.35, 0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460514', 'HM Treasury United Kingdom', '2021-08-09', 'active', 'GOVN', 'Trading_book_6'),
+    (4, 17, 1, 'USD', 'active', 300, 98.76, 'buy', '2021-09-27 00:00:00', '2016-04-02 00:00:00'),
     -- Row 26
-    ('Pension Holdings', 'sell', 'GBP', 1300, '2011-10-07', 'open', '2011-10-07', 110.35, 0.75, 'GBP', 'BDCHBW8', 900, 'GB00B6460515', 'HM Treasury United Kingdom', '2021-08-09', 'active', 'GOVN', 'Trading_book_6'),
+    (4, 17, 2, 'USD', 'active', 300, 98.76, 'buy', '2021-08-23 00:00:00', '2012-08-23 00:00:00'),
     -- Row 27
-    ('Zurich Pension fund 4', 'buy', 'USD', 60, '2021-09-27', 'open', '2012-02-04', 100.13, 2.02, 'USD', '87973RAA8', 690, 'US87973RAA86', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2021-08-06', 'active', 'SOVN', 'Trading_book_4'),
+    (4, 17, 1, 'USD', 'active', 300, 98.76, 'buy', '2021-09-27 00:00:00', '2013-04-02 00:00:00'),
     -- Row 28
-    ('Zurich Pension fund 4', 'buy', 'USD', 50, '2021-08-23', 'open', '2012-08-23', 100.13, 2.02, 'USD', '87973RAA8', 690, 'US87973RAA86', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2021-08-06', 'active', 'SOVN', 'Trading_book_4');
-
-
+    (4, 17, 3, 'USD', 'active', 300, 98.76, 'sell', '2021-08-23 00:00:00', '2015-08-23 00:00:00');

@@ -47,7 +47,7 @@ d. Way to use Spring Data JPA to interact with H2/MySQL Database
 # What is the CRUD operation?
 The CRUD stands for Create, Read/Retrieve, Update, and Delete. These are the four basic functions of the persistence storage.
 
-The CRUD operation can be defined as user interface conventions that allow view, search, and modify information through computer-based forms and reports. CRUD is data-oriented and the standardized use of HTTP action verbs. HTTP has a few important verbs.
+The CRUD operation can be defined as users interface conventions that allow view, search, and modify information through computer-based forms and reports. CRUD is data-oriented and the standardized use of HTTP action verbs. HTTP has a few important verbs.
 
 Within a database, each of these operations maps directly to a series of commands. However, their relationship with a RESTful API is slightly more complex.
 

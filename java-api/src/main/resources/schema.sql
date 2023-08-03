@@ -1,34 +1,33 @@
-DROP DATABASE IF EXISTS `bonds`;
-CREATE DATABASE `bonds`;
+DROP SCHEMA IF EXISTS `bonds`;
+CREATE SCHEMA `bonds`;
 use bonds;
 
 CREATE TABLE `book` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
-CREATE TABLE `user` (
+CREATE TABLE `client` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `role` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 CREATE TABLE `counterparty` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
-CREATE TABLE `book_user` (
+CREATE TABLE `book_client` (
   `book_id` int NOT NULL,
-  `user_id` int NOT NULL,
-  KEY `FK1_book_id` (`book_id`),
-  KEY `FK_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+  `client_id` int NOT NULL,
+  CONSTRAINT `FK1_book_id` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`),
+  CONSTRAINT `FK_client_id` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`)
+);
 
 CREATE TABLE `security` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -42,7 +41,7 @@ CREATE TABLE `security` (
   `currency` varchar(10) NOT NULL,
   `status` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 CREATE TABLE `trades` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -57,10 +56,9 @@ CREATE TABLE `trades` (
   `trade_date` datetime NOT NULL,
   `settlement_date` datetime NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK_security_id` (`security_id`),
-  KEY `FK_counterparty_id` (`counterparty_id`),
-  KEY `FK_book_id` (`book_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  CONSTRAINT `FK_security_id` FOREIGN KEY (`security_id`) REFERENCES `security` (`id`),
+  CONSTRAINT `FK_counterparty_id` FOREIGN KEY (`counterparty_id`) REFERENCES `counterparty` (`id`),
+  CONSTRAINT `FK_book_id` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`)
+);
 
-
-ALTER TABLE book_user ADD PRIMARY KEY(book_id, user_id);
+ALTER TABLE book_client ADD PRIMARY KEY(book_id, client_id);
