@@ -38,7 +38,7 @@ public class Security {
 
     // Getters and setters, constructors, and other methods as needed
 
-
+    public Security(){}
     public Security(Long id, String isin, String cusip, String issuerName, LocalDateTime maturityDate, float coupon, String type, float faceValue, String currency, String status) {
         this.id = id;
         this.isin = isin;

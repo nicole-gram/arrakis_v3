@@ -48,5 +48,9 @@ public class TradeService {
     public void deleteTrade(Long id) {
         tradeRepository.deleteById(id);
     }
+
+    public List<Trade> getActiveTrades() {
+        return tradeRepository.findByStatus("active");
+    }
 }
 

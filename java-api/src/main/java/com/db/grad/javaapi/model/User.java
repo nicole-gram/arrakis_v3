@@ -20,6 +20,7 @@ public class User {
 
     // Getters and setters, constructors, and other methods as needed
 
+    public User(){}
 
     public User(Long id, String name, String email, String role) {
         this.id = id;

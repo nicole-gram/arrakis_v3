@@ -44,7 +44,7 @@ public class Trade {
 
     // Getters and setters, constructors, and other methods as needed
 
-
+    public Trade(){}
     public Trade(Long id, Book book, Security security, Counterparty counterparty, String currency, String status, int quantity, float unitPrice, String buySell, LocalDateTime tradeDate, LocalDateTime settlementDate) {
         this.id = id;
         this.book = book;

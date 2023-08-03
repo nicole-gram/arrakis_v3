@@ -14,6 +14,7 @@ public class Counterparty {
 
     // Getters and setters, constructors, and other methods as needed
 
+    public Counterparty(){}
     public Counterparty(Long id, String name) {
         this.id = id;
         this.name = name;
