@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -52,5 +53,17 @@ public class TradeService {
     public List<Trade> getActiveTrades() {
         return tradeRepository.findByStatus("active");
     }
+
+    public List<Trade> getTradesWithinFiveDays() {
+        LocalDateTime today = LocalDateTime.now();
+
+        today = today.withYear(2021);
+
+        LocalDateTime fiveDaysFromNow = today.plusDays(5);
+        return tradeRepository.findBySettlementDateBetween(today, fiveDaysFromNow);
+    }
+
+
+
 }
 

@@ -28,5 +28,9 @@ public class TradeController {
         return ResponseEntity.ok(activeTrades);
     }
 
+    @GetMapping("/within-five-days")
+    public List<Trade> getTradesWithinFiveDays() {
+        return tradeService.getTradesWithinFiveDays();
+    }
 
 }
