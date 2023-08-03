@@ -1,59 +1,66 @@
-drop schema if exists bonds;
-CREATE schema bonds;
-USE bonds;
+DROP DATABASE IF EXISTS `bonds`;
+CREATE DATABASE `bonds`;
+use bonds;
 
-CREATE TABLE book (
-    book_id INT AUTO_INCREMENT PRIMARY KEY,
-    book_name VARCHAR(255)
-);
+CREATE TABLE `book` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE users (
-    u_id INT AUTO_INCREMENT PRIMARY KEY,
-    u_name VARCHAR(50)
-);
+CREATE TABLE `user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `role` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE counter_party (
-    counter_party_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(20)
-);
+CREATE TABLE `counterparty` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE security (
-    security_id INT AUTO_INCREMENT PRIMARY KEY,
-    cusip VARCHAR(50),
-    isin VARCHAR(50),
-    issuer_name VARCHAR(255),
-    bond_maturity_date DATE,
-    bond_currency VARCHAR(3),
-    face_value INT
-);
-
-CREATE TABLE book_user (
-    book_id INT,
-    u_id INT,
-    PRIMARY KEY (book_id, u_id),
-    FOREIGN KEY (book_id) REFERENCES book(book_id),
-    FOREIGN KEY (u_id) REFERENCES users(u_id)
-);
-
-CREATE TABLE trade (
-    trade_id INT AUTO_INCREMENT PRIMARY KEY,
-    book_id INT,
-    security_id INT,
-    counter_party_id INT,
-    bond_holder VARCHAR(255),
-    trade_type VARCHAR(50),
-    trade_currency VARCHAR(3),
-    quantity INT,
-    trade_settlement_date DATE,
-    trade_status VARCHAR(50),
-    trade_date DATE,
-    unit_price DECIMAL(6, 3),
-    coupon_percent DECIMAL(5, 4),
-    status_of VARCHAR(50),
-    type_of VARCHAR(50),
-    FOREIGN KEY (book_id) REFERENCES book(book_id),
-    FOREIGN KEY (security_id) REFERENCES security(security_id),
-    FOREIGN KEY (counter_party_id) REFERENCES counter_party(counter_party_id)
-);
+CREATE TABLE `book_user` (
+  `book_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  KEY `FK1_book_id` (`book_id`),
+  KEY `FK_user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
+CREATE TABLE `security` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `isin` varchar(50) DEFAULT NULL,
+  `cusip` varchar(50) DEFAULT NULL,
+  `issuer_name` varchar(255) NOT NULL,
+  `maturity_date` datetime NOT NULL,
+  `coupon` float NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `face_value` float NOT NULL,
+  `currency` varchar(10) NOT NULL,
+  `status` varchar(32) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `trades` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `book_id` int NOT NULL,
+  `security_id` int NOT NULL,
+  `counterparty_id` int NOT NULL,
+  `currency` varchar(10) NOT NULL,
+  `status` varchar(32) NOT NULL,
+  `quantity` int NOT NULL,
+  `unit_price` float NOT NULL,
+  `buy_sell` varchar(32) NOT NULL,
+  `trade_date` datetime NOT NULL,
+  `settlement_date` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_security_id` (`security_id`),
+  KEY `FK_counterparty_id` (`counterparty_id`),
+  KEY `FK_book_id` (`book_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE book_user ADD PRIMARY KEY(book_id, user_id);
