@@ -1,6 +1,6 @@
-INSERT INTO users (u_name) VALUES ('iboyles');
-INSERT INTO users (u_name) VALUES ('bob');
-INSERT INTO users (u_name) VALUES ('neelkanth');
+INSERT INTO `user` (u_name,email,role) VALUES ('iboyles','ianboyles2@gmail.com','Analyst');
+INSERT INTO `user` (u_name,email,role) VALUES ('bob','bobberson@gmail.com','No Access');
+INSERT INTO `user` (u_name,email,role) VALUES ('neelkanth','neelkanth@gmail.com','Admin');
 
 INSERT INTO book (book_name) VALUES ('Trading_book_1');
 INSERT INTO book (book_name) VALUES ('Trading_book_2');
