@@ -2,7 +2,7 @@
 
 ![dogs](dogs_api.jpg)
 
-TRELLO BOARD: 
+Resource: https://www.youtube.com/watch?v=QKq8DpLfTkU 
 
 In this example, we are creating crud operations and exposing them through REST APIs so that UI clients can invoke these operations. The demo operations enable the clients to modify the dogs records in database.
 
