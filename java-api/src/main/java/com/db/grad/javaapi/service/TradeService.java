@@ -72,7 +72,7 @@ public class TradeService {
         //client_id--> book_client and get the book id then get any
         // trade that matches book ids
         Long clientId = 1L;
-        return tradeRepository.findByClientId(clientId);
+        return tradeRepository.findByClientId(cliend);
     }
 
 

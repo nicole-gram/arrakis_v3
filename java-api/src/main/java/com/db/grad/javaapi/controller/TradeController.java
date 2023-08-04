@@ -38,7 +38,7 @@ public class TradeController {
         return tradeService.getTradesWithinFiveDaysBehind();
     }
 
-    @GetMapping("/get-book-of-trades")
+    @GetMapping("/get-book-of-trades/")//{id}path variable @PathVariable(value = "id") Long id
     public List<Trade> getBookOfTrades() {
         return tradeService.getBookOfTrades();
     }
