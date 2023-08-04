@@ -1,5 +1,4 @@
 import React from "react";
-import Trade from "./components/trade/Trade";
 import ActiveBonds from "./pages/active_bonds";
 import MyBonds from "./pages/my_bonds";
 import Navbar from "./components/navbar/navbar";
