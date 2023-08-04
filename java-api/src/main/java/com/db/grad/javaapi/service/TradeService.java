@@ -71,8 +71,8 @@ public class TradeService {
     public List<Trade> getBookOfTrades() {
         //client_id--> book_client and get the book id then get any
         // trade that matches book ids
-        return tradeRepository.findByClientId(1L);
-
+        Long clientId = 1L;
+        return tradeRepository.findByClientId(clientId);
     }
 
 
