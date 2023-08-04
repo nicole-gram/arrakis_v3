@@ -38,4 +38,9 @@ public class TradeController {
         return tradeService.getTradesWithinFiveDaysBehind();
     }
 
+    @GetMapping("/get-book-of-trades")
+    public List<Trade> getBookOfTrades() {
+        return tradeService.getBookOfTrades();
+    }
+
 }
