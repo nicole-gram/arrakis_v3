@@ -6,21 +6,18 @@ import com.db.grad.javaapi.dto.LoginRequestDTO;
 import com.db.grad.javaapi.dto.SignUpRequestDTO;
 import com.db.grad.javaapi.model.User;
 import com.db.grad.javaapi.repository.UserRepository;
-import com.db.grad.javaapi.service.LoginService;
-import com.db.grad.javaapi.service.TradeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@Service
 @RestController
-@RequestMapping("/login")
 @CrossOrigin
+@RequestMapping("/api")
 public class LoginController {
 
     @Autowired
@@ -28,7 +25,7 @@ public class LoginController {
     @Autowired
     private JwtUtils jwtUtils;
 
-
+    @PostMapping("/signUp")
     public APIResponse signUp(SignUpRequestDTO signUpRequestDTO) {
         APIResponse apiResponse = new APIResponse();
 
@@ -53,7 +50,7 @@ public class LoginController {
         // return
         return apiResponse;
     }
-
+    @PostMapping("/login")
     public APIResponse login(LoginRequestDTO loginRequestDTO) {
 
         APIResponse apiResponse = new APIResponse();

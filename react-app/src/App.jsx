@@ -1,8 +1,14 @@
 import React from "react";
-import { Pets } from "./components/pets/Pets";
+import Trade from "./components/Trade";
+
 
 const App = () => {
-  return <Pets />;
+  return (
+    <div>
+      <h1>My App</h1>
+      <Trade />
+    </div>
+  );
 };
 
 export default App;
