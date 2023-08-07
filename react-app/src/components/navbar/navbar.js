@@ -13,6 +13,9 @@ const Navbar = () => {
                     <NavLink to="/my_bonds" activeStyle>
                         My Bonds
                     </NavLink>
+                    <NavLink to="/bondDetails" activeStyle>
+                        Bond Details
+                    </NavLink>
                 </NavMenu>
             </Nav>
         </>
