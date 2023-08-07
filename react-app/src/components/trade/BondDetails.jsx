@@ -27,6 +27,7 @@ const BondDetails = () => {
             <TableCell>Trade ID</TableCell>
             <TableCell>ISIN</TableCell>
             <TableCell>CUSIP</TableCell>
+            <TableCell>Issuer Name</TableCell>
             <TableCell>Book Name</TableCell>
             <TableCell>Trade Date</TableCell>
           </TableRow>
@@ -37,6 +38,7 @@ const BondDetails = () => {
               <TableCell>{trade.id}</TableCell>
               <TableCell><strong>{trade.security.isin}</strong></TableCell>
               <TableCell><strong>{trade.security.cusip}</strong></TableCell>
+              <TableCell><strong>{trade.security.issuerName}</strong></TableCell>
               <TableCell>{trade.book.name}</TableCell>
               <TableCell>{trade.tradeDate}</TableCell>
               
