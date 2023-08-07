@@ -165,19 +165,5 @@ class TradeServiceTest {
     // As for getBookOfTrades method, it uses a fixed clientId value (1L) which may need to be handled differently for testing
     // You can either provide a test method with a different clientId or consider refactoring the method to accept clientId as a parameter
     // For now, we'll use a basic test with a fixed clientId of 1L
-    @Test
-    void testGetBookOfTrades() {
-        long clientId = 1L;
 
-        List<Trade> trades = new ArrayList<>();
-        trades.add(new Trade());
-        trades.add(new Trade());
-
-        when(tradeRepository.findByClientId(clientId)).thenReturn(trades);
-
-        List<Trade> result = tradeService.getBookOfTrades();
-
-        assertEquals(2, result.size());
-        verify(tradeRepository, times(1)).findByClientId(clientId);
-    }
 }

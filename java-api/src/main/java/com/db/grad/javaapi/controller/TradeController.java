@@ -4,10 +4,7 @@ import com.db.grad.javaapi.model.Trade;
 import com.db.grad.javaapi.service.TradeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -40,9 +37,9 @@ public class TradeController {
         return tradeService.getTradesWithinFiveDaysBehind();
     }
 
-    @GetMapping("/get-book-of-trades")
-    public List<Trade> getBookOfTrades() {
-        return tradeService.getBookOfTrades();
+    @PostMapping("/get-book-of-trades")
+    public List<Trade> getBookOfTrades(Long clientId) {
+        return tradeService.getBookOfTrades(clientId);
     }
 
 }
