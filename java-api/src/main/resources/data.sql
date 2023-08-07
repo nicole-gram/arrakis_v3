@@ -7,6 +7,9 @@ INSERT INTO book (name) VALUES ('Trading_book_6');
 INSERT INTO `client` (name,email,role) VALUES ('iboyles','ianboyles2@gmail.com','Analyst');
 INSERT INTO `client` (name,email,role) VALUES ('neelkanth','neelkanth@gmail.com','Admin');
 INSERT INTO `client` (name,email,role) VALUES ('bob','bobberson@gmail.com','No Access');
+INSERT INTO `client` (name,email,role) VALUES ('nicole','nic@gmail.com','Analyst');
+INSERT INTO `client` (name,email,role) VALUES ('richard','rich@gmail.com','Trader');
+INSERT INTO `client` (name,email,role) VALUES ('ben','ben@gmail.com','Trader');
 
 INSERT INTO counterparty (name) VALUES ('jeff');
 INSERT INTO counterparty (name) VALUES ('john');
