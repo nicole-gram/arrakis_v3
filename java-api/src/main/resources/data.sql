@@ -58,65 +58,65 @@ INSERT INTO book_client (book_id, client_id) VALUES (1, 1),(3, 2),(2, 1);
 INSERT INTO security (isin, cusip, issuer_name, maturity_date, coupon, type, face_value, currency, status)
 VALUES
     -- Row 1 row is security id
-    ('XS1988387210', '', 'BNPParibasIssu 4,37% Microsoft Corp (USD)', '2021-08-05', 4.37, '', 1000, 'USD', NULL),
+    ('XS1988387210', '', 'BNPParibasIssu 4,37% Microsoft Corp (USD)', '2021-08-05', 4.37, '', 1000, 'USD', 'open'),
     -- Row 2
-    ('USN0280EAR64', '123456780', 'Airbus 3.15% USD', '2021-07-30', 3.15, '', 900, 'USD', NULL),
+    ('USN0280EAR64', '123456780', 'Airbus 3.15% USD', '2021-07-30', 3.15, '', 900, 'USD', 'open'),
     -- Row 3
-    ('A12356111', '123456bh0', 'UBS Facebook (USD)', '2021-09-30', 2, '', 900, 'USD', NULL),
+    ('A12356111', '123456bh0', 'UBS Facebook (USD)', '2021-09-30', 2, '', 900, 'USD', 'open'),
     -- Row 4
-    ('USU02320AG12', 'AMZN 3.15 08/22/27 REGS', 'Amazon', '2021-08-03', 3.15, '', 900, 'USD', NULL),
+    ('USU02320AG12', 'AMZN 3.15 08/22/27 REGS', 'Amazon', '2021-08-03', 3.15, '', 900, 'USD', 'open'),
     -- Row 5
-    ('GB00B6460505', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
+    ('GB00B6460505', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', 'open'),
     -- Row 6
-    ('GB00B6460506', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
+    ('GB00B6460506', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', 'open'),
     -- Row 7
-    ('GB00B6460507', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
+    ('GB00B6460507', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', 'open'),
     -- Row 8
-    ('GB00B6460508', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
+    ('GB00B6460508', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', 'open'),
     -- Row 9
-    ('GB00B6460509', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
+    ('GB00B6460509', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', 'open'),
     -- Row 10
-    ('GB00B6460510', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
+    ('GB00B6460510', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', 'open'),
     -- Row 11
-    ('GB00B6460511', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
+    ('GB00B6460511', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', 'open'),
     -- Row 12
-    ('GB00B6460512', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
+    ('GB00B6460512', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', 'open'),
     -- Row 13
-    ('GB00B6460513', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
+    ('GB00B6460513', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', 'open'),
     -- Row 14
-    ('GB00B6460514', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
+    ('GB00B6460514', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', 'open'),
     -- Row 15
-    ('GB00B6460515', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', NULL),
+    ('GB00B6460515', 'BDCHBW8', 'HM Treasury United Kingdom', '2021-08-09', 0.75, 'GBP', 900, 'GBP', 'open'),
     -- Row 16
-    ('US87973RAA86', '', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2030-12-22', 1.123, 'USD', 340, 'USD', NULL),
+    ('US87973RAA86', '', 'TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S', '2030-12-22', 1.123, 'USD', 340, 'USD', 'open'),
     -- Row 17
-    ('IE00B29LNP31', '', 'First Norway Alpha Kl.IV', '2030-12-22', 1.123, 'USD', 340, 'USD', NULL);
+    ('IE00B29LNP31', '', 'First Norway Alpha Kl.IV', '2030-12-22', 1.123, 'USD', 340, 'USD', 'open');
 
 
 INSERT INTO trades (book_id, security_id, counterparty_id, currency, status, quantity, unit_price, buy_sell, trade_date, settlement_date)
 VALUES
     -- Row 1
-    (1, 1, 1, 'USD', 'open', 50, 90, 'buy', '2021-05-13 00:00:00', '2021-08-04 00:00:00'),
+    (1, 1, 1, 'USD', 'active', 50, 90, 'buy', '2021-05-13 00:00:00', '2021-08-04 00:00:00'),
     -- Row 2
-    (1, 1, 3, 'GBP', 'open', 40, 89.56, 'sell', '2021-02-04 00:00:00', '2021-08-04 00:00:00'),
+    (1, 1, 3, 'GBP', 'active', 40, 89.56, 'sell', '2021-02-04 00:00:00', '2021-08-04 00:00:00'),
     -- Row 3
-    (2, 2, 2, 'USD', 'open', 1000, 105.775, 'buy', '2021-05-13 00:00:00', '2021-08-23 00:00:00'),
+    (2, 2, 2, 'USD', 'active', 1000, 105.775, 'buy', '2021-05-13 00:00:00', '2021-08-23 00:00:00'),
     -- Row 4
-    (2, 2, 1, 'GBP', 'open', 900, 105.775, 'sell', '2021-02-04 00:00:00', '2021-09-10 00:00:00'),
+    (2, 2, 1, 'GBP', 'active', 900, 105.775, 'sell', '2021-02-04 00:00:00', '2021-09-10 00:00:00'),
     -- Row 5
-    (3, 3, 2, 'USD', 'open', 50, 90, 'buy', '2021-05-13 00:00:00', '2021-08-23 00:00:00'),
+    (3, 3, 2, 'USD', 'active', 50, 90, 'buy', '2021-05-13 00:00:00', '2021-08-23 00:00:00'),
     -- Row 6
-    (2, 2, 3, 'USD', 'open', 1000, 105.775, 'buy', '2021-05-13 00:00:00', '2021-08-23 00:00:00'),
+    (2, 2, 3, 'USD', 'active', 1000, 105.775, 'buy', '2021-05-13 00:00:00', '2021-08-23 00:00:00'),
     -- Row 7
-    (2, 3, 1, 'USD', 'open', 50, 90, 'sell', '2021-05-13 00:00:00', '2021-08-23 00:00:00'),
+    (2, 3, 1, 'USD', 'active', 50, 90, 'sell', '2021-05-13 00:00:00', '2021-08-23 00:00:00'),
     -- Row 8
-    (4, 4, 2, 'GBP', 'open', 60, 98.56, 'buy', '2021-02-04 00:00:00', '2021-09-27 00:00:00'),
+    (4, 4, 2, 'GBP', 'active', 60, 98.56, 'buy', '2021-02-04 00:00:00', '2021-09-27 00:00:00'),
     -- Row 9
     (4, 4, 1, 'USD', 'active', 50, 98.56, 'buy', '2012-02-04 00:00:00', '2021-08-23 00:00:00'),
     -- Row 10
-    (5, 5, 2, 'GBP', 'open', 1100, 110.35, 'buy', '2021-09-27 00:00:00', '2021-09-27 00:00:00'),
+    (5, 5, 2, 'GBP', 'active', 1100, 110.35, 'buy', '2021-09-27 00:00:00', '2021-09-27 00:00:00'),
     -- Row 11
-    (5, 6, 1, 'GBP', 'open', 900, 110.35, 'sell', '2021-09-28 00:00:00', '2021-09-28 00:00:00'),
+    (5, 6, 1, 'GBP', 'active', 900, 110.35, 'sell', '2021-09-28 00:00:00', '2021-09-28 00:00:00'),
     -- Row 12
     (5, 7, 3, 'GBP', 'active', 2000, 110.35, 'buy', '2021-09-29 00:00:00', '2021-09-29 00:00:00'),
     -- Row 13
