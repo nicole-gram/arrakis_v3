@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-
 const Dropdown = ({ options, onSelect, navigate }) => {
   const [selectedOption, setSelectedOption] = useState('');
+  
 
   const handleChange = (event) => {
     const selectedValue = event.target.value;
@@ -18,16 +18,26 @@ const Dropdown = ({ options, onSelect, navigate }) => {
     console.log(selectedOption);
     
     try {
-      await axios.post(
+      const response = await axios.post(
         "http://localhost:8080/trades/get-book-of-trades?clientId=" + selectedOption,
         selectedOption
       );
+    
+      // You can now access the response data from the 'response' variable
+      console.log("Response: ", response.data);
+    
+      // You can also save the response data to localStorage if needed
+      localStorage.setItem('responseFromServer', JSON.stringify(response.data));
+    
+      // Perform any other actions with the response data here
+    
     } catch (err) {
       console.log("Error: ", err);
     }
-
+    
   };
 
+  
   return (
     <div>
       <select onChange={handleChange}>

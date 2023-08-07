@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route }
     from 'react-router-dom';
 import Bond from "./pages/bondDetails";
 import SelectUser from "./pages/select_user";
+import PersonalBond from "./pages/personalbonds";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path='/active_bonds' element={<ActiveBonds />} />
             <Route path='/bondDetails' element={<Bond/>}/>
             <Route path='/my_bonds' element={<MyBonds />} />
+            <Route path='/personal_bonds' element={<PersonalBond />} />
         </Routes>
     </Router>
 );
