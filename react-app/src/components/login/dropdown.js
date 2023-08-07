@@ -1,9 +1,9 @@
 // Dropdown.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-
-const Dropdown = ({ options, onSelect, navigate }) => {
+const Dropdown = ({ options, onSelect }) => {
   const [selectedOption, setSelectedOption] = useState('');
 
   const handleChange = (event) => {
@@ -12,20 +12,15 @@ const Dropdown = ({ options, onSelect, navigate }) => {
     onSelect(selectedValue);
   };
 
+  const navigate = useNavigate();
+
   const handleSubmit = async () => {
     // Perform any additional processing or validation you need here.
     // For now, we'll use the navigate function passed from App.js to navigate.
     console.log(selectedOption);
-    
-    try {
-      await axios.post(
-        "http://localhost:8080/trades/get-book-of-trades?clientId=" + selectedOption,
-        selectedOption
-      );
-    } catch (err) {
-      console.log("Error: ", err);
-    }
 
+    navigate(`/my_bonds/${selectedOption}`);
+    window.location.reload();
   };
 
   return (
@@ -44,3 +39,4 @@ const Dropdown = ({ options, onSelect, navigate }) => {
 };
 
 export default Dropdown;
+

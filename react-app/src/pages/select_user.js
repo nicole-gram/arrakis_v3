@@ -1,9 +1,9 @@
 // SelectUser.js
 import React, { useState } from 'react';
 import Dropdown from '../components/login/dropdown';
+import { useNavigate } from 'react-router-dom';
 
 const SelectUser = () => {
-  // Sample list of users
   const users = [
     { id: 1, name: 'iboyles' },
     { id: 2, name: 'neelkanth' },
@@ -11,7 +11,6 @@ const SelectUser = () => {
     { id: 4, name: 'nicole' },
     { id: 5, name: 'richard' },
     { id: 6, name: 'ben' }
-    // Add more users as needed
   ];
 
   const [selectedUser, setSelectedUser] = useState(null);
@@ -24,12 +23,11 @@ const SelectUser = () => {
 
   return (
     <div>
-    <h1> Select User </h1>
+      <h1>Select User</h1>
       <Dropdown
         options={users.map((user) => ({ value: user.id, label: user.name }))}
         onSelect={handleUserSelection}
       />
-      {selectedUser && <p>Selected User: {selectedUser.name}</p>}
     </div>
   );
 };
