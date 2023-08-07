@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../../components/navbar/navbar";
 import ActiveBonds from "../../pages/active_bonds";
-import MyBonds from "../../pages/my_bonds";
+import MyBonds from "../../pages/personal_bonds";
 import Bond from "../../pages/bondDetails";
 
 

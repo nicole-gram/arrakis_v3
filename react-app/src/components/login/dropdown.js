@@ -19,7 +19,7 @@ const Dropdown = ({ options, onSelect }) => {
     // For now, we'll use the navigate function passed from App.js to navigate.
     console.log(selectedOption);
 
-    navigate(`/my_bonds/${selectedOption}`);
+    navigate(`/personal_bonds/${selectedOption}`);
     window.location.reload();
   };
 
