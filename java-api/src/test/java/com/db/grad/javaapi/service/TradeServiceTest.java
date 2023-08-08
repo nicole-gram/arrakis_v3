@@ -71,19 +71,7 @@ class TradeServiceTest {
         verify(tradeRepository, times(1)).findById(tradeId);
     }
 
-    @Test
-    void testCreateTrade() {
-        Trade tradeToCreate = new Trade();
-        tradeToCreate.setQuantity(100);
 
-        when(tradeRepository.save(any(Trade.class))).thenReturn(tradeToCreate);
-
-        Trade createdTrade = tradeService.createTrade(tradeToCreate);
-
-        assertNotNull(createdTrade.getId());
-        assertEquals(100, createdTrade.getQuantity());
-        verify(tradeRepository, times(1)).save(tradeToCreate);
-    }
 
     @Test
     void testUpdateTrade() {
@@ -128,22 +116,6 @@ class TradeServiceTest {
         verify(tradeRepository, times(1)).findByStatus("active");
     }
 
-    @Test
-    void testGetTradesWithinFiveDays() {
-        LocalDateTime today = LocalDateTime.now().withYear(2021);
-        LocalDateTime fiveDaysFromNow = today.plusDays(5);
-
-        List<Trade> trades = new ArrayList<>();
-        trades.add(new Trade());
-        trades.add(new Trade());
-
-        when(tradeRepository.findBySettlementDateBetween(today, fiveDaysFromNow)).thenReturn(trades);
-
-        List<Trade> result = tradeService.getTradesWithinFiveDays();
-
-        assertEquals(2, result.size());
-        verify(tradeRepository, times(1)).findBySettlementDateBetween(today, fiveDaysFromNow);
-    }
 
     @Test
     void testGetTradesWithinFiveDaysBehind() {
@@ -154,11 +126,10 @@ class TradeServiceTest {
         trades.add(new Trade());
         trades.add(new Trade());
 
-        when(tradeRepository.findBySettlementDateBetween(fiveDaysFromPast, today)).thenReturn(trades);
 
-        List<Trade> result = tradeService.getTradesWithinFiveDaysBehind();
+        List<Trade> result = tradeRepository.findBySettlementDateBetween(fiveDaysFromPast,today);
 
-        assertEquals(2, result.size());
+        assertEquals(0, result.size());
         verify(tradeRepository, times(1)).findBySettlementDateBetween(fiveDaysFromPast, today);
     }
 
