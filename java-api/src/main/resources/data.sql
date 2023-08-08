@@ -15,7 +15,7 @@ INSERT INTO counterparty (name) VALUES ('jeff');
 INSERT INTO counterparty (name) VALUES ('john');
 INSERT INTO counterparty (name) VALUES ('swetha');
 
-INSERT INTO book_client (book_id, client_id) VALUES (1, 1),(3, 2),(2, 1);
+INSERT INTO book_client (book_id, client_id) VALUES (1, 1),(3, 2),(2, 1)(3,3)(4,3);
 
 --
 --INSERT INTO security (cusip, isin, issuer_name, bond_maturity_date, bond_currency, face_value)
